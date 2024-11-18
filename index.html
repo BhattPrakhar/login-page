@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login form in HTML and CSS</title>
+  <title>Login Form in HTML and CSS</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <style>
+    /* Body Styles */
     body {
       display: flex;
       flex-direction: column;
@@ -16,37 +17,129 @@
       height: 100vh;
       margin: 0;
       background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
     }
-    
+
+    /* Wrapper Styles */
     .wrapper {
       background-color: white;
       text-align: center;
-      padding: 15px;
-      border-radius: 2px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
     }
-    
+
+    /* Logo Image */
     img {
-      max-width: 100%;
-      display: block;
-      margin: 0 auto;
+      max-width: 100px;
       margin-bottom: 20px;
     }
-    
+
+    /* Form Styles */
     form {
-      max-width: 500px;
-      margin: 0 auto;
+      width: 100%;
     }
-    
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
     .input-box {
-      margin-top: 10px;
+      position: relative;
+      margin: 20px 0;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px;
+      padding-left: 35px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .input-box input:focus {
+      border-color: #4CAF50;
+    }
+
+    .input-box i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+
+    /* Remember Me and Forgot Password Section */
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .remember-forgot a {
+      text-decoration: none;
+      color: #4CAF50;
+    }
+
+    /* Submit Button */
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    /* Register Link */
+    .register-link {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .register-link a {
+      text-decoration: none;
+      color: #4CAF50;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 480px) {
+      .wrapper {
+        padding: 20px;
+      }
+
+      .input-box input {
+        padding-left: 30px;
+      }
+
+      .btn {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
   <img src="img/real.jpeg" alt="logo here">
   <div class="wrapper">
-    <form action="">
+    <form action="" method="post">
       <h1>Login</h1>
       <div class="input-box">
         <input type="text" placeholder="Username" name="username" required>
